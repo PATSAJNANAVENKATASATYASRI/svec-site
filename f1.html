@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form - CSE Department</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: green;
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      gap: 10px;
+    }
+    .submit-btn {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form>
+    <label for="name">Enter your name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="password">Enter your password</label>
+    <input type="password" id="password" name="password" required />
+
+    <label for="mobile">Enter your mobile number</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+
+    <label>Select your gender</label>
+    <div class="radio-group">
+      <input type="radio" id="male" name="gender" value="Male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" />
+      <label for="female">Female</label>
+    </div>
+
+    <label>Select your favourite programming languages</label>
+    <div class="checkbox-group">
+      <input type="checkbox" id="java" name="language" value="Java" />
+      <label for="java">Java</label>
+      <input type="checkbox" id="python" name="language" value="Python" />
+      <label for="python">Python</label>
+      <input type="checkbox" id="csharp" name="language" value="C#.Net" />
+      <label for="csharp">C#.Net</label>
+    </div>
+
+    <label for="qualification">Select your highest qualification</label>
+    <select id="qualification" name="qualification">
+      <option value="B.Tech">B.Tech</option>
+      <option value="M.Tech">M.Tech</option>
+      <option value="PhD">Ph.D</option>
+    </select>
+
+    <label for="dob">Select your date of birth</label>
+    <input type="date" id="dob" name="dob" required />
+
+    <label for="photo">Upload your photo</label>
+    <input type="file" id="photo" name="photo" accept="image/*" />
+
+    <label for="about">About yourself</label>
+    <textarea id="about" name="about" rows="4" placeholder="Tell us something about yourself..."></textarea>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</body>
+</html>
